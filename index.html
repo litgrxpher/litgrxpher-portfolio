@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="mediaqueries.css">
+</head>
+<body>
+    <nav id="desktop-nav">
+        <div class="logo">Adharsh CS</div>
+        <div>
+            <ul class="nav-links">
+                <li><a href="#about">About</a></li>
+                <li><a href="#education">Education</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+    <nav id="hamburger-nav">
+        <div class="logo">Adharsh CS</div>
+        <div class="hamburger-menu">
+            <div class="hamburger-icon" onclick="toggleMenu()">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            <div class="menu-links">
+                <li><a href="#about" onclick="toggleMenu()">About</a></li>
+                <li><a href="#education" onclick="toggleMenu()">Education</a></li>
+                <li><a href="#skills" onclick="toggleMenu()">Skills</a></li>
+                <li><a href="#contact" onclick="toggleMenu()">Contact</a></li>
+            </div>
+        </div>
+    </nav>
+    <section id="profile">
+        <div class="section__pic-container">
+            <img src="./assets/profile-pic.png" alt="Adharsh profile picture">
+        </div>
+        <div class="section__text">
+            <p class="section__text__p1">Hello, I'm</p>
+            <h1 class="title">Adharsh CS</h1>
+            <p class="section__text__p2" onmouseover="changeTextAndColor()" onmouseout="changeTextAndColor()">Electronics Engineer</p>
+            <div class="btn-container">
+                <button class="btn btn-color-2" onclick="window.open('./assets/Resume_Adharsh_CS.pdf')">My Resume</button>
+                <button class="btn btn-color-1" onclick="location.href=('./#contact')">Connect here</button>
+            </div>
+            <div id="socials-container">
+                <!-- OPEN IN EXISTING TAB -->
+                <!-- <img src="./assets/linkedin.png" alt="My LinkedIn Profile" class="icon" onclick="location.href='https://www.linkedin.com/in/adharshcs21/'">
+                <img src="./assets/github.png" alt="My Github Profile" class="icon" onclick="location.href='https://github.com/litgrxpher'">
+                <img src="./assets/behance.png" alt="My Behance Profile" class="icon" onclick="location.href='https://www.behance.net/adharshcs'">
+                <img src="./assets/instagram.png" alt="My instagram" class="icon" onclick="location.href='https://www.instagram.com/litgrxpher/'"> -->
+
+                <a href="https://www.linkedin.com/in/adharshcs21/" target="_blank">
+                    <img src="./assets/linkedin.png" alt="My LinkedIn Profile" class="icon">
+                </a>
+                <a href="https://github.com/litgrxpher" target="_blank">
+                    <img src="./assets/github.png" alt="My Github Profile" class="icon">
+                </a>
+                <a href="https://www.behance.net/adharshcs" target="_blank">
+                    <img src="./assets/behance.png" alt="My Behance Profile" class="icon">
+                </a>
+                <a href="https://www.instagram.com/litgrxpher/" target="_blank">
+                    <img src="./assets/instagram.png" alt="My instagram" class="icon">
+                </a>   
+            </div>
+        </div>
+    </section>
+    
+    <section id="about">
+        <p class="section__text__p1">Get To Know More</p>
+        <h1 class="title">About Me</h1>
+        <div class="section-container">
+          <div class="section__pic-container">
+            <img
+              src="./assets/about-pic.jpg"
+              alt="Profile picture"
+              class="about-pic"
+            />
+          </div>
+          <div class="about-details-container">
+            <div class="about-containers">
+              <div class="details-container">
+                <img
+                  src="./assets/experience.png"
+                  alt="College icon"
+                  class="icon"
+                />
+                <h3>College</h3>
+                <p>B.Tech (ECE) <br />KMEA Engineering College, Aluva</p>
+              </div>
+              <div class="details-container">
+                <img
+                  src="./assets/education.png"
+                  alt="High School icon"
+                  class="icon"
+                />
+                <h3>High School</h3>
+                <p>XII (Electronics)<br />Model Technical Higher Sec. School, Kaloor</p>
+              </div>
+            </div>
+            <div class="text-container">
+              <p>
+                I am an electronics engineer with a B.Tech in Electronics and Communication Engineering, passionate about electronics design and dedicated to pursuing innovative projects. With a strong focus on Arduino projects, I bring technical expertise and a commitment to exploring advanced technologies. Alongside my technical skills, I have a deep passion for creative design and editing, enabling me to blend technical precision with artistic flair. My goal is to contribute to cutting-edge developments and collaborate on impactful projects in the electronics industry, leveraging my diverse skill set to drive innovation and excellence.
+              </p>
+            </div>
+          </div>
+        </div>
+        <img
+          src="./assets/arrow.png"
+          alt="Arrow icon"
+          class="icon arrow"
+          onclick="location.href='./#skills'"
+        />
+      </section>
+
+    <script src="script.js"></script>
+</body>
+</html>

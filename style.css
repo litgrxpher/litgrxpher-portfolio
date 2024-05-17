@@ -297,6 +297,10 @@ section {
     border-radius: 2rem;
   }
   
+  .text-container p {
+    color: black;
+  }
+
   .arrow {
     position: absolute;
     right: -5rem;

@@ -5,17 +5,6 @@ function toggleMenu() {
     icon.classList.toggle("open");
 }
 
-function changeTextAndColor() {
-    var textElement = document.querySelector('.section__text__p2');
-    if (textElement.textContent === "Electronics Engineer") {
-        textElement.textContent = "Jack Of All Trades";
-        textElement.style.color = "red";
-    } else {
-        textElement.textContent = "Electronics Engineer";
-        textElement.style.color = ""; 
-    }
-}
-
 const logoImg = document.getElementById('logo-img');
 const defaultImageSrc = './assets/lx.png'; 
 
@@ -30,3 +19,38 @@ logoImg.addEventListener('mouseover', function() {
 logoImg.addEventListener('mouseout', function() {
     logoImg.src = defaultImageSrc; 
 });
+
+var nameElement = document.getElementById('name');
+var professionElement = document.getElementById('profession');
+
+
+var originalName = nameElement.textContent;
+var originalProfession = {
+  text: professionElement.textContent,
+  color: window.getComputedStyle(professionElement).color 
+};
+
+
+nameElement.addEventListener('mouseover', function() {
+  
+  this.textContent = 'Litgrxpher';
+  
+  this.style.color = 'red';
+  
+  professionElement.textContent = 'Jack Of All Trades :)';
+  
+  professionElement.style.color = 'black';
+});
+
+
+nameElement.addEventListener('mouseout', function() {
+  
+  this.textContent = originalName;
+  this.style.color = '';
+  
+  professionElement.textContent = originalProfession.text;
+  professionElement.style.color = originalProfession.color;
+});
+
+
+

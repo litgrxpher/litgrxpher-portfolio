@@ -9,6 +9,83 @@ body {
     font-family: "Poppins", sans-serif;
 }
 
+/* Dark mode styles */
+body.dark-mode {
+    background-color: black;
+    color: white;
+}
+
+body.dark-mode a {
+    color: white;
+}
+
+body.dark-mode a:hover {
+    color: black;
+    text-decoration-color: black;
+}
+
+body.dark-mode .nav-links a {
+    color: white;
+}
+
+body.dark-mode .nav-links a:hover {
+    color: grey;
+    text-decoration-color: grey;
+}
+
+body.dark-mode .btn-color-1 {
+    background: white;
+    color: black;
+}
+
+body.dark-mode .btn-color-1:hover {
+    background: rgb(53, 53, 53);
+    color: white;
+}
+
+body.dark-mode .btn-color-2 {
+    background: none;
+    color: white;
+    border-color: white;
+}
+
+body.dark-mode .btn-color-2:hover {
+    background: white;
+    color: black;
+    border-color: black;
+}
+
+body.dark-mode .details-container {
+    background: rgb(0, 0, 0);
+    color: white;
+    border-color: rgb(255, 255, 255);
+}
+
+body.dark-mode .icon {
+    filter: invert(1);
+}
+
+body.dark-mode .text-container p {
+    color: white;
+}
+
+body.dark-mode .skills-sub-title {
+    color: white;
+}
+
+body.dark-mode .contact-info-upper-container {
+    background: black;
+    border-color: rgb(255, 255, 255);
+}
+
+body.dark-mode .contact-info-container a:hover {
+    color: grey;
+    text-decoration: underline;
+    text-underline-offset: 1rem;
+    text-decoration-color: rgb(181,181,181);
+}
+
+
 html {
     scroll-behavior: smooth;
 }
@@ -153,6 +230,18 @@ a:hover {
 
 .hamburger-icon span:first-child {
     transform: none;
+}
+
+body.dark-mode .hamburger-icon span {
+    background-color: white;
+}
+
+body.dark-mode .menu-links {
+    background-color: black;
+}
+
+body.dark-mode .menu-links a {
+    color: white;
 }
 
 /* sections */

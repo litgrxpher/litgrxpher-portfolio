@@ -5,21 +5,6 @@ function toggleMenu() {
     icon.classList.toggle("open");
 }
 
-const logoImg = document.getElementById('logo-img');
-const defaultImageSrc = './assets/lx.png'; 
-
-
-const hoverImageSrc = './assets/litgrxpher.png'; 
-
-
-logoImg.addEventListener('mouseover', function() {
-    logoImg.src = hoverImageSrc; 
-});
-
-logoImg.addEventListener('mouseout', function() {
-    logoImg.src = defaultImageSrc; 
-});
-
 var nameElement = document.getElementById('name');
 var professionElement = document.getElementById('profession');
 
@@ -39,7 +24,7 @@ nameElement.addEventListener('mouseover', function() {
   
   professionElement.textContent = 'Jack Of All Trades :)';
   
-  professionElement.style.color = 'black';
+  professionElement.style.color = 'white';
 });
 
 
@@ -53,4 +38,16 @@ nameElement.addEventListener('mouseout', function() {
 });
 
 
+function toggleDarkMode() {
+  const body = document.body;
+  const logoImg = document.getElementById('logo-img');
+
+  body.classList.toggle('dark-mode');
+
+  if (body.classList.contains('dark-mode')) {
+      logoImg.src = './assets/lx_white.png'; // Add your dark mode logo image path
+  } else {
+      logoImg.src = './assets/lx.png';
+  }
+}
 

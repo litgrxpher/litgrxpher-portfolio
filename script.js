@@ -17,15 +17,18 @@ var originalProfession = {
 
 
 nameElement.addEventListener('mouseover', function() {
-  
   this.textContent = 'Litgrxpher';
-  
   this.style.color = 'red';
-  
+
   professionElement.textContent = 'Jack Of All Trades :)';
-  
-  professionElement.style.color = 'white';
+
+  if (document.body.classList.contains('dark-mode')) {
+      professionElement.style.color = 'white';
+  } else {
+      professionElement.style.color = 'black';
+  }
 });
+
 
 
 nameElement.addEventListener('mouseout', function() {

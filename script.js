@@ -54,3 +54,37 @@ function toggleDarkMode() {
   }
 }
 
+// Define the IntersectionObserver with a callback function
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach((entry) => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add('show');
+    } else {
+      entry.target.classList.remove('show');
+    }
+  });
+}, {
+  threshold: 0.1 // Adjust this threshold value as needed
+});
+
+// Select all section elements to be observed
+const sections = document.querySelectorAll('section');
+
+// Observe each section
+sections.forEach((section) => {
+  observer.observe(section);
+});
+
+// Add CSS for the fading effect
+const style = document.createElement('style');
+style.innerHTML = `
+  section {
+    opacity: 0;
+    transition: opacity 0.6s ease-out;
+  }
+
+  section.show {
+    opacity: 1;
+  }
+`;
+document.head.appendChild(style);

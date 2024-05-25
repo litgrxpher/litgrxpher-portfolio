@@ -259,6 +259,10 @@ section {
     display: flex;
 }
 
+section.show {
+    opacity: 1;
+  }
+  
 /* profile */
 
 #profile {

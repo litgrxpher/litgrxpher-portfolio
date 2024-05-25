@@ -75,16 +75,3 @@ sections.forEach((section) => {
   observer.observe(section);
 });
 
-// Add CSS for the fading effect
-const style = document.createElement('style');
-style.innerHTML = `
-  section {
-    opacity: 0;
-    transition: opacity 0.6s ease-out;
-  }
-
-  section.show {
-    opacity: 1;
-  }
-`;
-document.head.appendChild(style);

@@ -20,7 +20,7 @@ nameElement.addEventListener('mouseover', function() {
   this.textContent = 'Litgrxpher';
   this.style.color = 'red';
 
-  professionElement.textContent = 'Jack Of All Trades :)';
+  professionElement.textContent = 'Jack Of All Trades, Master of None :)';
 
   if (document.body.classList.contains('dark-mode')) {
       professionElement.style.color = 'white';
